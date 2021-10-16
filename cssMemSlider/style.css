@@ -35,6 +35,7 @@ body {
 .img1-background, .img2-background, .img3-background, .img4-background {
     display: grid;
     grid-area: 1 / 1 / 12 / 5;
+    border-radius: 2vw;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     animation: background-hide 500ms;
@@ -149,16 +150,38 @@ label:hover {
     background-image: url(assets/img/button-active-hover.png);
 }
 
+@media (max-width: 1025px) {
 
+    .wrapper {
+        width: 78vw;
+        height: 58vw;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(15, 1fr);
+        padding: 2vw;
+    }
 
+    .img1-wrapper, .img2-wrapper, .img3-wrapper, .img4-wrapper {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(13, 1fr);
+        grid-area: 1 / 1 / 16 / 4;
+    }
 
+    .label-wrapper {
+        grid-area: 13 / 2 / 15 / 3;
+    }
 
+    .img1-background, .img2-background, .img3-background, .img4-background {
+        grid-area: 1 / 1 / 13 / 5;
+        border-radius: 2vw;
+    }
 
+    .text {
+        grid-area: 14 / 1 / 16 / 5;
+        font-size: 4vw; 
+    }
 
-
-
-
-
-
-
-
+    label {
+        width: 5vw;
+        height: 5vw;
+    }
+}
