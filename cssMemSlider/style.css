@@ -39,19 +39,19 @@ body {
 }
 
 .img1-background {
-    background-image: url(assets/img/mem1.jpg);
+    background-image: url(assets/img/mem10.jpg);
 }
 
 .img2-background {
-    background-image: url(assets/img/mem2.jpg);
+    background-image: url(assets/img/mem20.jpg);
 }
 
 .img3-background {
-    background-image: url(assets/img/mem3.jpg);
+    background-image: url(assets/img/mem30.jpg);
 }
 
 .img4-background {
-    background-image: url(assets/img/mem4.png);
+    background-image: url(assets/img/mem40.jpg);
 }
 
 .text {
