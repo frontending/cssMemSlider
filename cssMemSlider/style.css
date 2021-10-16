@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -11,10 +12,12 @@ body {
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: burlywood;
+    display: grid;
+    width: 60vw;
+    height: 42vw;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    padding: 1vw;
 }
 
 #btn1, #btn2, #btn3, #btn4 {
@@ -23,34 +26,74 @@ body {
 
 .img1-wrapper, .img2-wrapper, .img3-wrapper, .img4-wrapper {
     display: none;
-    margin: 5vh 5vw;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-area: 1 / 1 / 16 / 5;
 }
 
-img {
-    width: 50vw;
+.img1-background, .img2-background, .img3-background, .img4-background {
+    display: grid;
+    grid-area: 1 / 1 / 12 / 5;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.img1-background {
+    background-image: url(assets/img/mem1.jpg);
+}
+
+.img2-background {
+    background-image: url(assets/img/mem2.jpg);
+}
+
+.img3-background {
+    background-image: url(assets/img/mem3.jpg);
+}
+
+.img4-background {
+    background-image: url(assets/img/mem4.png);
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    grid-area: 12 / 1 / 13 / 5;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2rem;
+    color: #FFFFFF;
 }
 
 #btn1:checked + .img1-wrapper {
-    display: block;
+    display: grid;
 }
 
 #btn2:checked + .img2-wrapper {
-    display: block;
+    display: grid;
 }
 
 #btn3:checked + .img3-wrapper {
-    display: block;
+    display: grid;
 }
 
 #btn4:checked + .img4-wrapper {
-    display: block;
+    display: grid;
+}
+
+.label-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: 15 / 4 / 16 / 5;
+    background-color: cyan;
 }
 
 label {
-    width: 30px;
-    height: 30px;
+    width: 2.8vw;
+    height: 2.8vw;
     background-color: darkgreen;
-    margin: 5px;
 }
 
 
