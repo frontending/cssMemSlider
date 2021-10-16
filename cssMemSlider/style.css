@@ -27,7 +27,7 @@ body {
 .img1-wrapper, .img2-wrapper, .img3-wrapper, .img4-wrapper {
     display: none;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-rows: repeat(13, 1fr);
     grid-area: 1 / 1 / 16 / 5;
     overflow: hidden;
 }
@@ -65,18 +65,19 @@ body {
 .text {
     display: flex;
     align-items: center;
-    grid-area: 12 / 1 / 13 / 5;
+    grid-area: 12 / 1 / 14 / 5;
     font-family: Roboto;
     font-style: normal;
     font-weight: 300;
     font-size: 2.5vw;
+    margin-top: 3vw;
     color: #FFFFFF;
     animation: txt-hide 300ms;
 }
 
 @keyframes txt-hide {
-    0%   { margin: 0% 100% 0% -100%; }
-    100% { margin: 0% 0% 0% 0%; }
+    0%   { margin: 3vw 100% 0% -100%; }
+    100% { margin: 3vw 0% 0% 0%; }
 }
 
 .label-wrapper {
@@ -116,9 +117,37 @@ label:hover {
     display: grid;
 }
 
+#btn1:checked ~ .label-wrapper > .label-btn1 {
+    background-image: url(assets/img/button-active.png);
+}
 
+#btn2:checked ~ .label-wrapper > .label-btn2 {
+    background-image: url(assets/img/button-active.png);
+}
 
+#btn3:checked ~ .label-wrapper > .label-btn3 {
+    background-image: url(assets/img/button-active.png);
+}
 
+#btn4:checked ~ .label-wrapper > .label-btn4 {
+    background-image: url(assets/img/button-active.png);
+}
+
+#btn1:checked ~ .label-wrapper > .label-btn1:hover {
+    background-image: url(assets/img/button-active-hover.png);
+}
+
+#btn2:checked ~ .label-wrapper > .label-btn2:hover {
+    background-image: url(assets/img/button-active-hover.png);
+}
+
+#btn3:checked ~ .label-wrapper > .label-btn3:hover {
+    background-image: url(assets/img/button-active-hover.png);
+}
+
+#btn4:checked ~ .label-wrapper > .label-btn4:hover {
+    background-image: url(assets/img/button-active-hover.png);
+}
 
 
 
