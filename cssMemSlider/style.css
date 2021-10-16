@@ -29,13 +29,21 @@ body {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(12, 1fr);
     grid-area: 1 / 1 / 16 / 5;
+    overflow: hidden;
 }
 
 .img1-background, .img2-background, .img3-background, .img4-background {
     display: grid;
     grid-area: 1 / 1 / 12 / 5;
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
+    animation: background-hide 500ms;
+}
+
+@keyframes background-hide {
+    0%   { margin: 0% 100% 0% -100%; }
+    40%   { margin: 0% -10% 0% 10%; }
+    100% { margin: 0% 0% 0% 0%; }
 }
 
 .img1-background {
@@ -61,8 +69,35 @@ body {
     font-family: Roboto;
     font-style: normal;
     font-weight: 300;
-    font-size: 2rem;
+    font-size: 2.5vw;
     color: #FFFFFF;
+    animation: txt-hide 300ms;
+}
+
+@keyframes txt-hide {
+    0%   { margin: 0% 100% 0% -100%; }
+    100% { margin: 0% 0% 0% 0%; }
+}
+
+.label-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: 15 / 4 / 16 / 5;
+}
+
+label {
+    width: 2.8vw;
+    height: 2.8vw;
+    background-image: url(assets/img/button.png);
+    background-size: contain;
+    transition: background-image 500ms;
+}
+
+label:hover {
+    cursor: pointer;
+    background-image: url(assets/img/button-hover.png);
 }
 
 #btn1:checked + .img1-wrapper {
@@ -81,20 +116,6 @@ body {
     display: grid;
 }
 
-.label-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    grid-area: 15 / 4 / 16 / 5;
-    background-color: cyan;
-}
-
-label {
-    width: 2.8vw;
-    height: 2.8vw;
-    background-color: darkgreen;
-}
 
 
 
